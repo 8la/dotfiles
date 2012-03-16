@@ -1,11 +1,7 @@
-" ------------------------------------
-"  My Vim power :)
-"
-"  Collected by: Alberto Lorenzo
-" 
-" ------------------------------------
-
 syntax on
+set ts=4
+set sw=4
+set noautoindent
 colorscheme koehler
 
 " ------------
@@ -20,8 +16,6 @@ set showmatch  " Set show matching parenthesis
 " ----------------
 " Identation stuff
 " ----------------
-set ts=4
-set sw=4
 set expandtab  " Convert tabs on spaces
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>' 
                " if u have a line indented on col 10 and your ts=4 with shiftround '<' will indent to col=8
@@ -50,6 +44,15 @@ set wildignore=*.swp,*.bak,*.pyc
 " Show autocomplete menu for commands
 set wildmenu
 
+" -----------------------
+" Interface
+" -----------------------
+  
+set title " Change terminal's title
+
+" Be silent about invalid cursor moves and errors
+set visualbell   " don't beep
+set noerrorbells " don't beep
 
 " ---------------------------
 " Vundle  plugin requirements

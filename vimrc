@@ -1,7 +1,14 @@
+" ------------------------------------
+"  My Vim power :)
+"
+"  Collected by: Alberto Lorenzo
+" 
+" ------------------------------------
+
+" -----------------
+" Aspect and colors
+" -----------------
 syntax on
-set ts=4
-set sw=4
-set noautoindent
 colorscheme koehler
 
 " ------------
@@ -16,6 +23,8 @@ set showmatch  " Set show matching parenthesis
 " ----------------
 " Identation stuff
 " ----------------
+set ts=4
+set sw=4
 set expandtab  " Convert tabs on spaces
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>' 
                " if u have a line indented on col 10 and your ts=4 with shiftround '<' will indent to col=8
@@ -23,7 +32,6 @@ set shiftround " use multiple of shiftwidth when indenting with '<' and '>'
 set ruler      " Show position of the cursor all time
 set autoindent " Activate autoindentation (great for python)
 
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
 
 " Hide a buffer instead of closing it so you can have unwritten changes on 
 " a buffer and edit a new one without being forced to write or undo changes first. 

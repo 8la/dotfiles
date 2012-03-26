@@ -77,6 +77,11 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+
+" My bundlers
+" 
+Bundle 'snipMate'
+
 filetype plugin indent on     " required! 
 
 

@@ -21,6 +21,22 @@ colorscheme koehler
 "  n... :  where to save the viminfo files
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
+" --------------------------------
+" Auto-Jump last editting position
+" --------------------------------
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+
 " ------------
 " Search stuff
 " ------------

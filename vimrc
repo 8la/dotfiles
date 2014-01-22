@@ -51,6 +51,8 @@ set showmatch  " Set show matching parenthesis
 " ----------------
 set ts=4
 set sw=4
+" Use 2 spaces on ruby files
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 set expandtab  " Convert tabs on spaces
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>' 
                " if u have a line indented on col 10 and your ts=4 with shiftround '<' will indent to col=8

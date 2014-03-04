@@ -86,6 +86,66 @@ set wildmenu
   
 set title " Change terminal's title
 
+" Allways open split panes on the right below
+set splitbelow
+set splitright
+" Move cursos between panes directly Ctrl+[HJKL]
+"
+nnoremap <C-Down> <C-W><C-J>
+nnoremap <C-Up> <C-W><C-K>
+nnoremap <C-Right> <C-W><C-L>
+nnoremap <C-Left> <C-W><C-H>
+
+" Be silent about invalid cursor moves and errors
+set visualbell   " don't beep
+set noerrorbells " don't beep
+
+" ---------------------------
+" Vundle  plugin requirements
+" ---------------------------
+set nocompatible   " Use Vi Improved enviroment and behaviour
+filetype off
+
+" Include vundle in the runtime path
+set rtp+=~/.vim/bundle/vundle/
+" Launch vundle
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+
+" My bundlers
+" 
+Bundle 'snipMate'
+
+filetype plugin indent on     " required! 
+
+
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+" Some Shortcuts...
+
+let mapleader="," " Change the mapleader from default '\' to ',' 
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Be silent about invalid cursor moves and errors
 set visualbell   " don't beep
 set noerrorbells " don't beep

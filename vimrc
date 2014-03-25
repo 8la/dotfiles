@@ -93,7 +93,15 @@ set title " Change terminal's title
 " Allways open split panes on the right below
 set splitbelow
 set splitright
+
 " Move cursos between panes directly Ctrl+[HJKL]
+"
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Move cursos between panes directly Ctrl+Cursor
 "
 nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
@@ -123,58 +131,28 @@ Bundle 'gmarik/vundle'
 " My bundlers
 " 
 Bundle 'snipMate'
-
 filetype plugin indent on     " required! 
 
+" --------------------------
+" Status bar with steroids
+" --------------------------
+Bundle 'bling/vim-airline'
 
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" Required for vim-airline
 
-" Some Shortcuts...
+set t_Co=256      " Enable 256 colors in vim
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
-let mapleader="," " Change the mapleader from default '\' to ',' 
+" --------------------------
+" Quoting and parenthesizing
+" --------------------------
+Bundle 'tpope/vim-surround'
 
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" Be silent about invalid cursor moves and errors
-set visualbell   " don't beep
-set noerrorbells " don't beep
-
-" ---------------------------
-" Vundle  plugin requirements
-" ---------------------------
-set nocompatible   " Use Vi Improved enviroment and behaviour
-filetype off
-
-" Include vundle in the runtime path
-set rtp+=~/.vim/bundle/vundle/
-" Launch vundle
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-
-" My bundlers
-" 
-Bundle 'snipMate'
-
-filetype plugin indent on     " required! 
+" --------------------------
+" Git wrapper
+" --------------------------
+Bundle 'tpope/vim-fugitive'
 
 
 "

@@ -52,10 +52,24 @@ set showmatch  " Set show matching parenthesis
 set ts=4
 set sw=4
 
+" ---------------
+"  Ruby
+" ---------------
+
 " Use 2 spaces on ruby files
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
 "Thorfile ruby syntax
 autocmd BufRead,BufNewFile Thorfile set filetype=ruby
+
+" Use 2 spaces on yml files
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
+
+" Use 2 spaces on erb files
+autocmd Filetype eruby setlocal ts=2 sts=2 sw=2
+
+
+
 
 set expandtab  " Convert tabs on spaces
 set shiftround " use multiple of shiftwidth when indenting with '<' and '>' 
@@ -130,6 +144,11 @@ Bundle 'gmarik/vundle'
 
 " My bundlers
 " 
+
+
+" ---------------------------
+" SnipMate for tab completion
+" ---------------------------
 Bundle 'snipMate'
 filetype plugin indent on     " required! 
 

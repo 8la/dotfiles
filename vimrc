@@ -50,7 +50,13 @@ set showmatch  " Set show matching parenthesis
 " Identation and syntax stuff
 " ---------------------------
 set ts=4
+set sts=4
 set sw=4
+
+set foldenable
+set foldmethod=indent
+" Start wit all folds open
+set foldlevel=20
 
 " ---------------
 "  Ruby
@@ -145,7 +151,6 @@ Bundle 'gmarik/vundle'
 " My bundlers
 " 
 
-
 " ---------------------------
 " SnipMate for tab completion
 " ---------------------------
@@ -174,6 +179,18 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 
 
+" --------------------------
+" python-mode
+" --------------------------
+Bundle 'klen/python-mode'
+
+" Required for python-mode 
+autocmd Filetype python filetype plugin on
+autocmd Filetype python filetype indent on
+
+" --- END python-mode ---
+
+
 "
 " Brief help
 " :BundleList          - list configured bundles
@@ -191,4 +208,3 @@ let mapleader="," " Change the mapleader from default '\' to ','
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
-

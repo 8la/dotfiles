@@ -1,5 +1,6 @@
 [push]
 	default = simple
+    followTags = true
 [user]
 	name = <FillThisone>
 	email = <FillThisOne>
@@ -14,3 +15,5 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
+[core]
+    autocrlf = input

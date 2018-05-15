@@ -6,7 +6,7 @@ install_vundle()
 {
     [[ -d ~/.vim/bundle/vundle/.git ]] &&
         { echo "Vundle is already installed"; return 0; }
-    git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle ||
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim ||
         { echo "Could not clone Vundle"; return 1; }
     return 0
 }
@@ -16,7 +16,7 @@ get_bundles()
 {
     echo "Updating Vim Bundles"
     install_vundle || return 1
-    vim +BundleInstall +qa || (echo "Error installing bundles"; return 1 )
+    vim +PluginInstall +qa || (echo "Error installing bundles"; return 1 )
 }
 
 install_vundle

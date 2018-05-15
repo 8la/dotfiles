@@ -5,6 +5,87 @@
 " 
 " ------------------------------------
 
+
+
+" ---------------------------
+" Vundle  plugin requirements
+" ---------------------------
+set nocompatible   " Use Vi Improved enviroment and behaviour
+filetype off
+
+" Include vundle in the runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+" Launch vundle
+call vundle#begin()
+
+" let Vundle manage Vundle
+" required! 
+Plugin 'VundleVim/Vundle.vim'
+
+
+" My bundlers
+" -----------
+
+" ---------------------------
+"  Syntastic lint
+" ---------------------------
+Plugin 'vim-syntastic/syntastic'
+let g:syntastic_yaml_checkers = ['yamllint']
+" ---------------------------
+" SnipMate for tab completion
+" ---------------------------
+Plugin 'snipMate'
+filetype plugin indent on     " required! 
+
+" --------------------------
+" Status bar with steroids
+" --------------------------
+Plugin 'bling/vim-airline'
+
+" Required for vim-airline
+
+set t_Co=256      " Enable 256 colors in vim
+set laststatus=2
+let g:airline_powerline_fonts = 1
+
+" --------------------------
+" Quoting and parenthesizing
+" --------------------------
+Plugin 'tpope/vim-surround'
+
+" --------------------------
+" Git wrapper
+" --------------------------
+Plugin 'tpope/vim-fugitive'
+
+
+" --------------------------
+" python-mode
+" --------------------------
+Plugin 'klen/python-mode'
+
+" Required for python-mode 
+autocmd Filetype python filetype plugin on
+autocmd Filetype python filetype indent on
+
+" --- END python-mode ---
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+
 " -----------------
 " Aspect and colors
 " -----------------
@@ -45,6 +126,7 @@ set incsearch  " Show matches as you type
 set ignorecase " Ignore case when searching
 set smartcase  " Ignore case if search pattern is all lowercase, case-sensitive otherwise
 set showmatch  " Set show matching parenthesis
+set modeline
 
 " ---------------------------
 " Identation and syntax stuff
@@ -131,78 +213,6 @@ nnoremap <C-Left> <C-W><C-H>
 " Be silent about invalid cursor moves and errors
 set visualbell   " don't beep
 set noerrorbells " don't beep
-
-" ---------------------------
-" Vundle  plugin requirements
-" ---------------------------
-set nocompatible   " Use Vi Improved enviroment and behaviour
-filetype off
-
-" Include vundle in the runtime path
-set rtp+=~/.vim/bundle/vundle/
-" Launch vundle
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-
-" My bundlers
-" 
-
-" ---------------------------
-" SnipMate for tab completion
-" ---------------------------
-Bundle 'snipMate'
-filetype plugin indent on     " required! 
-
-" --------------------------
-" Status bar with steroids
-" --------------------------
-Bundle 'bling/vim-airline'
-
-" Required for vim-airline
-
-set t_Co=256      " Enable 256 colors in vim
-set laststatus=2
-let g:airline_powerline_fonts = 1
-
-" --------------------------
-" Quoting and parenthesizing
-" --------------------------
-Bundle 'tpope/vim-surround'
-
-" --------------------------
-" Git wrapper
-" --------------------------
-Bundle 'tpope/vim-fugitive'
-
-
-" --------------------------
-" python-mode
-" --------------------------
-Bundle 'klen/python-mode'
-
-" Required for python-mode 
-autocmd Filetype python filetype plugin on
-autocmd Filetype python filetype indent on
-
-" --- END python-mode ---
-
-
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-
-" Some Shortcuts...
-
 let mapleader="," " Change the mapleader from default '\' to ',' 
 
 " Quickly edit/reload the vimrc file

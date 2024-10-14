@@ -17,3 +17,14 @@
     ls = ls-files
 [core]
     autocrlf = input
+    editor = vim
+[pager]
+    branch = false
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED

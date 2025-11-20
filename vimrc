@@ -90,7 +90,8 @@ filetype plugin indent on    " required
 " Aspect and colors
 " -----------------
 syntax on
-colorscheme koehler
+set background=dark
+colorscheme solarized
 
 " ----------------------------------
 " Rememeber some things when exiting

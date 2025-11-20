@@ -42,6 +42,8 @@ filetype plugin indent on     " required!
 " --------------------------
 Plugin 'bling/vim-airline'
 
+Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
+
 " Required for vim-airline
 
 set t_Co=256      " Enable 256 colors in vim
@@ -91,7 +93,8 @@ filetype plugin indent on    " required
 " -----------------
 syntax on
 set background=dark
-colorscheme solarized
+#colorscheme solarized
+colorscheme catppuccin_mocha
 
 " ----------------------------------
 " Rememeber some things when exiting

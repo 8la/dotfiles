@@ -41,6 +41,7 @@ filetype plugin indent on     " required!
 " Status bar with steroids
 " --------------------------
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
 
@@ -95,6 +96,7 @@ syntax on
 set background=dark
 #colorscheme solarized
 colorscheme catppuccin_mocha
+let g:airline_theme = 'angr'
 
 " ----------------------------------
 " Rememeber some things when exiting
